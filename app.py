@@ -1,5 +1,4 @@
-# TODO: Document all features
-
+from waitress import serve
 from flask import Flask, request, send_file
 from werkzeug.exceptions import NotFound
 from pathlib import Path
@@ -73,4 +72,4 @@ def get_audio():
     return send_file(file)
 
 if __name__ == '__main__':
-    app.run()
+    serve(app, listen="*:8080")
