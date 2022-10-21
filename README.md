@@ -14,8 +14,6 @@ cd yomi-audio
 pip install -r requirements.txt
 ```
 
-## Example deployment
+## CLI
 
-```
-python app.py -d "/home/user/1_audio" -d "/home/user/2_audio" -d "/home/user/3_audio"
-```
+TBD...
