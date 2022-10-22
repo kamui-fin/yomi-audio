@@ -38,3 +38,13 @@ With both ways, the `term` and `reading` must be surrounded by `{}` as a templat
 One way is to use `-p` to directly match using a completely static/pre-defined naming pattern. This can be useful if the underlying naming scheme of the directory does not vary. For example, if all the files are named like `pronunciation_喜欢.mp3`, you can simply use the static pattern `pronunciation_{term}.mp3`.
 
 The other way with `-g` utilizes powerful [glob](<https://en.wikipedia.org/wiki/Glob_(programming)>) functionality. An example would be `???{term}???.mp3` to match `{term}` with 3 leading and trailing characters.
+
+## Connecting to Yomichan
+
+Once you have the server running, open Yomichan settings. Click "Configure audio playback sources" under the Audio section and add the following custom URL:
+
+```
+http://localhost:5000/?expression={term}&reading={reading}
+```
+
+
